@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  db:
+    container_name: mysql
+    image: mysql:latest
+    ports:
+      - 3307:3306
+    networks:
+      - api_server
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=pongpedia_golang
+      # - DATABASE_HOST=db
+
+  api:
+    container_name: api
+    image: subaruputra13/backend:1.0
+    restart: on-failure
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    # links:
+    #   - db
+    environment:
+      - DB_NAME=pongpedia_golang
+      - DB_USERNAME=alta
+      - DB_PASSWORD=root
+      - DB_PORT=3306
+      - DB_HOST=db
+    networks:
+      - api_server
+
+networks:
+  api_server:
+    name: api_server
+# docker container create --name api -e DB_NAME=pongpedia_golang -e DB_USER=alta -e DB_PASSWORD=root -e DB_PORT=3306 -e DB_HOST=Amboksing -p 8080:8080 backend:latest
+# docker container create --name db -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=pongpedia_golang -p 3307:3306 mysql:latest

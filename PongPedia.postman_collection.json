@@ -1,0 +1,626 @@
+{
+	"info": {
+		"_postman_id": "4da478ce-2c35-43a1-b193-e0d248fd2aae",
+		"name": "PongPedia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24582718"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get Data User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/profile",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Password",
+									"value": "subaruputra13",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/profile",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Data User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "subaruputra13",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "subaruputra13@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "subaruputra13",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/profile",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Player",
+			"item": [
+				{
+					"name": "Update Player",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "bebek123456",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "2002",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Men",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/profile/player",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"profile",
+								"player"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Match",
+			"item": [
+				{
+					"name": "Get Match",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/match",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"match"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Match Result By id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/match/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"match",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Turnament",
+			"item": [
+				{
+					"name": "Get Turnament",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/tournament",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tournament"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Turnament Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/tournament/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tournament",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Turnament",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "turnament_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/tournament/register",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tournament",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Dashoboard Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/Dashboard/Admin",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"Dashboard",
+								"Admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/Dashboard/Admin/user",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"Dashboard",
+								"Admin",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Turnament",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "KTS PINGPONG CUP S2",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2024-10-14",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-10-20",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "JAKARTA",
+									"type": "text"
+								},
+								{
+									"key": "slot",
+									"value": "16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/Dashboard/Admin/turnament",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"Dashboard",
+								"Admin",
+								"turnament"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Match",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "match_name",
+									"value": "Pemanasan Match",
+									"type": "text"
+								},
+								{
+									"key": "match_date",
+									"value": "Besok",
+									"type": "text"
+								},
+								{
+									"key": "player_1",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "player_2",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "player1_score",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "player2_score",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "turnament_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/Dashboard/Admin/match",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"Dashboard",
+								"Admin",
+								"match"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Match",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "player_1",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "player_2",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/Dashboard/Admin/match/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"Dashboard",
+								"Admin",
+								"match",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Turnament",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "match_name",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "match_date",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "start_date",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "end_date",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "location",
+									"value": "fix error",
+									"type": "text"
+								},
+								{
+									"key": "slot",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/Dashboard/Admin/turnament/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"Dashboard",
+								"Admin",
+								"turnament",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"console.log(jsonData.data.token);\r",
+							"pm.globals.set(\"token\", jsonData.data.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}/login",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "a@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "a",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}/register",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/logout",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
